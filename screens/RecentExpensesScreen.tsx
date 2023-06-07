@@ -1,14 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native'
+
 import React from 'react'
+
+import { ExpensesOutPut } from '../components'
+import { Dummy_EXPENSES } from '../utils'
 
 export function RecentExpensesScreen() {
 	return (
-		<View>
-			<Text>AllExpensesScreen</Text>
-		</View>
+			<ExpensesOutPut expenses={Dummy_EXPENSES} periodName={'Last 7 Days'} />
 	)
 }
 
 export default RecentExpensesScreen
 
-const styles = StyleSheet.create({})
+
