@@ -5,13 +5,15 @@ import { RootStackParamList } from '../types'
 import { GlobalStyles } from '../constants'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { AllExpensesScreen, RecentExpensesScreen } from '../screens'
+import { StyleSheet, TouchableOpacity } from 'react-native'
+import { FormButton } from '../components'
 
 const Tab = createBottomTabNavigator<RootStackParamList>()
 
 export function BottomTabNavigator() {
 	return (
 		<Tab.Navigator
-			screenOptions={({ route }) => ({
+			screenOptions={({ route, navigation }) => ({
 				headerStyle: { backgroundColor: GlobalStyles.colors.primary500 },
 				headerTitleStyle: { color: 'white' },
 				headerTintColor: 'white',
@@ -26,6 +28,16 @@ export function BottomTabNavigator() {
 					justifyContent: 'center',
 					backgroundColor: GlobalStyles.colors.primary500,
 				},
+				headerRight: ({ tintColor }) => (
+					<FormButton
+						isIconButton
+						iconName="add"
+						iconSize={24}
+						iconColor={tintColor}
+						onPress={() => {	navigation.navigate('MangeExpense')}}
+						buttonContainerStyle={styles.buttonContainerStyle}
+					/>
+				),
 			})}>
 			<Tab.Screen
 				name="RecentExpenses"
@@ -54,3 +66,7 @@ export function BottomTabNavigator() {
 }
 
 export default BottomTabNavigator
+
+const styles = StyleSheet.create({
+	buttonContainerStyle: {},
+})
