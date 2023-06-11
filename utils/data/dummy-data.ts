@@ -108,7 +108,156 @@ export const Dummy_EXPENSES: Expense[] = [
 		description: 'Expense 18',
 		amount: 8.75,
 		date: new Date('2022-01-18'),
-	},
+	}, {
+    id: 'e19',
+    description: 'Eating Out',
+    amount: 18.5,
+    date: new Date('2022-01-19'),
+  },
+  {
+    id: 'e20',
+    description: 'Entertainment',
+    amount: 22.75,
+    date: new Date('2022-01-20'),
+  },
+  {
+    id: 'e21',
+    description: 'Shopping',
+    amount: 12.99,
+    date: new Date('2022-01-21'),
+  },
+  {
+    id: 'e22',
+    description: 'Transportation',
+    amount: 16.0,
+    date: new Date('2022-01-22'),
+  },
+  {
+    id: 'e23',
+    description: 'Healthcare',
+    amount: 9.5,
+    date: new Date('2022-01-23'),
+  },
+  {
+    id: 'e24',
+    description: 'Home Maintenance',
+    amount: 14.75,
+    date: new Date('2022-01-24'),
+  },
+  {
+    id: 'e25',
+    description: 'Travel',
+    amount: 20.25,
+    date: new Date('2022-01-25'),
+  },
+  {
+    id: 'e26',
+    description: 'Education',
+    amount: 8.99,
+    date: new Date('2022-01-26'),
+  },
+  {
+    id: 'e27',
+    description: 'Utilities',
+    amount: 11.5,
+    date: new Date('2022-01-27'),
+  },
+  {
+    id: 'e28',
+    description: 'Fitness',
+    amount: 13.75,
+    date: new Date('2022-01-28'),
+  },
+  {
+    id: 'e29',
+    description: 'Gifts',
+    amount: 17.0,
+    date: new Date('2022-01-29'),
+  },
+  {
+    id: 'e30',
+    description: 'Miscellaneous',
+    amount: 15.25,
+    date: new Date('2022-01-30'),
+  },
+  {
+    id: 'e31',
+    description: 'Dining Out',
+    amount: 22.75,
+    date: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000), // 5 days ago
+  },
+  {
+    id: 'e32',
+    description: 'Transportation',
+    amount: 12.99,
+    date: new Date(Date.now() - 4 * 24 * 60 * 60 * 1000), // 4 days ago
+  },
+  {
+    id: 'e33',
+    description: 'Entertainment',
+    amount: 16.0,
+    date: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000), // 3 days ago
+  },
+  {
+    id: 'e34',
+    description: 'Home Improvement',
+    amount: 9.5,
+    date: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000), // 2 days ago
+  },
+  {
+    id: 'e35',
+    description: 'Personal Care',
+    amount: 14.75,
+    date: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000), // 1 day ago
+  },
+  {
+    id: 'e36',
+    description: 'Healthcare',
+    amount: 20.25,
+    date: new Date(), // current date
+  },
+  {
+    id: 'e37',
+    description: 'Subscription',
+    amount: 8.99,
+    date: new Date(), // current date
+  },
+  {
+    id: 'e38',
+    description: 'Education',
+    amount: 11.5,
+    date: new Date(), // current date
+  },
+  {
+    id: 'e39',
+    description: 'Gifts',
+    amount: 13.75,
+    date: new Date(), // current date
+  },
+  {
+    id: 'e40',
+    description: 'Hobbies',
+    amount: 17.0,
+    date: new Date(), // current date
+  },
+  {
+    id: 'e41',
+    description: 'Travel',
+    amount: 15.25,
+    date: new Date(), // current date
+  },
+  {
+    id: 'e42',
+    description: 'Miscellaneous',
+    amount: 25.5,
+    date: new Date(), // current date
+  },  {
+    id: 'e43',
+    description: 'Shopping',
+    amount: 18.5,
+    date: new Date(Date.now() - 6 * 24 * 60 * 60 * 1000), // 6 days ago
+  },
+
 ]
 
-console.log(Dummy_EXPENSES)
+

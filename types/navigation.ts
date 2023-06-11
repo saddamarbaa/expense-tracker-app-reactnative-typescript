@@ -11,7 +11,7 @@ import {
 
 // Define the types for your stack navigator screens
 export type RootStackParamList = {
-	MangeExpense: undefined
+	MangeExpense: { expenseId?: string }
 	AllExpenses: undefined
 	ExpenseOverView: { categoryId: string }
 	RecentExpenses: undefined
