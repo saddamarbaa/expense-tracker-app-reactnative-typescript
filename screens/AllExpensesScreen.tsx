@@ -1,15 +1,12 @@
-
 import React from 'react'
 
 import { ExpensesOutPut } from '../components'
-import { Dummy_EXPENSES } from '../utils'
+import { useExpensesContext } from '../globalStates'
 
 export function AllExpensesScreen() {
-	return (
-			<ExpensesOutPut expenses={Dummy_EXPENSES} periodName={'Total'} />
-  )
+	const { expenses } = useExpensesContext()
+
+	return <ExpensesOutPut expenses={expenses} periodName={'Total'} />
 }
 
 export default AllExpensesScreen
-
-

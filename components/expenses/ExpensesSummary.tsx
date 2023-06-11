@@ -14,10 +14,14 @@ export function ExpensesSummary({ periodName, expenses }: Props) {
 		return accumulator + expense.amount
 	}, 0)
 
+	if (!expensesSum) {
+		return null
+	}
+
 	return (
 		<Card style={styles.container}>
 			<Text style={styles.period}>{periodName}</Text>
-			<Text style={styles.sum}> ${expensesSum.toFixed(2) || 0}</Text>
+			<Text style={styles.sum}> ${expensesSum?.toFixed(2) || 0}</Text>
 		</Card>
 	)
 }

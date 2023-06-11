@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { Ionicons, MaterialIcons, FontAwesome } from '@expo/vector-icons'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import { RootStackParamList } from '../types'
 import { GlobalStyles } from '../constants'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { AllExpensesScreen, RecentExpensesScreen } from '../screens'
-import { StyleSheet, TouchableOpacity } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { FormButton } from '../components'
 
 const Tab = createBottomTabNavigator<RootStackParamList>()

@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native'
+import { Platform, Pressable, StyleSheet, Text, View } from 'react-native'
 import { NavigationProp, useNavigation } from '@react-navigation/native'
 
 import { Card } from '../ui/Card'
@@ -21,15 +21,25 @@ export default function ExpenseItem({
 	const navigation = useNavigation<NavigationProp<RootStackParamList>>()
 
 	const handlePress = (id: string) => {
-		if (id) {
-			navigation.navigate('MangeExpense')
+		if (id && onProgress) {
+			// navigation.navigate('MangeExpense', {
+			// 	expenseId: id,
+			// })
 
 			// we can also call on press function
-			if (onProgress) {
-				onProgress(id)
-			}
+			onProgress(id)
 		}
 	}
+
+	const androidRippleConfig = Platform.select({
+		android: {
+			color: 'rgba(0, 0, 0, 0.1)',
+			borderless: false,
+			android_disableSound: true,
+			android_hapticFeedback: false,
+		},
+		// default: undefined,
+	})
 
 	return (
 		<Card style={styles.shadowProp}>
@@ -41,7 +51,7 @@ export default function ExpenseItem({
 					// for IOS ripple effect
 					return pressed && styles.pressedItem
 				}}
-				android_ripple={{ color: GlobalStyles.colors.gray500 }}>
+				android_ripple={androidRippleConfig}>
 				<View style={styles.item}>
 					<View>
 						<Text style={[styles.textBase, styles.description]}>
@@ -84,15 +94,17 @@ const styles = StyleSheet.create({
 	},
 	pressedItem: {
 		opacity: 0.5,
-		backgroundColor: GlobalStyles.colors.primary500,
+		backgroundColor: GlobalStyles.colors.gray500,
+		borderRadius: 8,
+		overflow: 'hidden',
 	},
+
 	item: {
 		flexDirection: 'row',
 		width: '100%',
 		alignItems: 'center',
 		justifyContent: 'space-between',
-		padding: 10,
-		paddingLeft: 16,
+		padding: 15,
 	},
 	textBase: {
 		color: GlobalStyles.colors.error50,
